@@ -2,7 +2,8 @@ package com.tanver.Competitive.leetcode.problems;
 
 import java.util.Stack;
 
-class Solution {
+public class P1980_FindUniqueBinaryString {
+
     public String findDifferentBinaryString(String[] nums) {
         Stack<String> stack = new Stack<>();
         int len = nums.length;
@@ -23,12 +24,11 @@ class Solution {
         }
         return stack.peek();
     }
-}
 
-public class P1980_FindUniqueBinaryString {
+
     public static void main(String[] args) {
         String[] nums = {"111", "011", "001"};
-        Solution obj = new Solution();
+        P1980_FindUniqueBinaryString obj = new P1980_FindUniqueBinaryString();
         System.out.println(obj.findDifferentBinaryString(nums));
     }
 }
