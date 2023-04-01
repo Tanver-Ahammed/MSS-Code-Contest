@@ -1,5 +1,7 @@
 package com.tanver;
 
+import java.util.Arrays;
+
 @FunctionalInterface
 interface Calculator {
     void add(int a, int b);
@@ -45,4 +47,45 @@ public class Main {
         cRef.getMessage("I am Tanver");
 
     }
+}
+
+
+class Solution {
+    public int[] plusOne(int[] digits) {
+        int len = digits.length;
+        if (digits[len - 1] < 9) {
+            digits[len - 1] = digits[len - 1] + 1;
+            return digits;
+        } else {
+            boolean isAll9 = true;
+            for (int digit : digits) {
+                if (digit != 9) {
+                    isAll9 = false;
+                    break;
+                }
+            }
+            if (isAll9) {
+                int[] result = new int[len + 1];
+                result[0] = 1;
+                return result;
+            } else {
+                int carry = 1;
+                digits[len - 1] = 0;
+                for (int i = digits.length - 2; i >= 0; i--) {
+                    digits[i] += carry;
+                    if (digits[i] == 10)
+                        digits[i] = 0;
+                    else
+                        break;
+                }
+                return digits;
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+        Solution solution = new Solution();
+        System.out.println(Arrays.toString(solution.plusOne(new int[]{9, 9, 8, 9})));
+    }
+
 }
