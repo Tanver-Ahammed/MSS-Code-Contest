@@ -1,7 +1,5 @@
 package com.tanver.Competitive.leetcode.problems;
 
-import com.tanver.Main;
-
 import java.util.Arrays;
 
 public class P1051_HeightChecker {

@@ -1,4 +1,5 @@
-package com.tanver;
+package com.tanver.Competitive.leetcode.problems;
+
 
 public class Main {
 
