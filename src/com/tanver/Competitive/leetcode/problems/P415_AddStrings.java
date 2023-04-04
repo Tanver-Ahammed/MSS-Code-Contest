@@ -35,25 +35,7 @@ public class P415_AddStrings {
     }
 
     public static void main(String[] args) {
-        System.out.println(new P415_AddStrings().isPowerOfThree(1));
+        System.out.println(new P415_AddStrings().addStrings("1", "65456454"));
     }
 
-    public boolean isPowerOfThree(int n) {
-        if (n == 1)
-            return true;
-        if (n % 3 != 0)
-            return false;
-        int temp = 0;
-        int i = 0;
-        while (temp <= n) {
-            temp = (int) Math.pow(3, i);
-            if (temp == n)
-                return true;
-            if (n > 0)
-                i++;
-            else
-                return false;
-        }
-        return false;
-    }
 }
