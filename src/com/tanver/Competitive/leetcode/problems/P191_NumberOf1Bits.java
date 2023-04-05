@@ -1,5 +1,7 @@
 package com.tanver.Competitive.leetcode.problems;
 
+import java.util.List;
+
 public class P191_NumberOf1Bits {
 
     public int hammingWeight(int n) {

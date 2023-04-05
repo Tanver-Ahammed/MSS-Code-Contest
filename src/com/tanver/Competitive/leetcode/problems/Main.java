@@ -2,26 +2,41 @@ package com.tanver.Competitive.leetcode.problems;
 
 
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
 
 
-    // intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8]
-    // [[1,5],[6,9]]
-    public int[][] insert(int[][] intervals, int[] newInterval) {
-        int index = 0;
-        int first = -1;
-        int last = -1;
-        for (int i = 0; i < intervals.length; i++) {
-            int[] arr = intervals[i];
-            first = Math.min(arr[0], newInterval[0]);
-            last = Math.max(arr[1], newInterval[1]);
+    public String[] getFolderNames(String[] names) {
+        Map<String, Integer> map = new HashMap<>();
+        for (int i = 0; i < names.length; i++) {
+            String name = names[i];
+            int count = map.getOrDefault(name, 0);
+            while (map.containsKey(name))
+                name = names[i] + "(" + ++count + ")";
+            map.put(name, 0);
+            map.put(names[i], count);
+            names[i] = name;
         }
-        return intervals;
+        return names;
     }
 
     public static void main(String[] args) {
-        System.out.println(Arrays.deepToString(new Main().insert(new int[][]{{1, 3}, {6, 9}}, new int[]{1, 5})));
+
+//        String st = "get(1)";
+//        System.out.println(st.substring(0, st.length() - 3));
+//
+//        String[] names = new String[]{"gta", "gta(1)", "gta", "gta", "gta(1)", "gta", "avalon"};
+//        System.out.println(Arrays.toString(names));
+//        System.out.println(Arrays.toString(new Main().getFolderNames(names)));
+        System.out.println(new Main().reverseBits(654615212));
+    }
+
+    public int reverseBits(int n) {
+        String binary = Integer.toBinaryString(n);
+        binary = new StringBuilder(binary).reverse().toString();
+        return (int) Long.parseLong(binary, 2);
     }
 
 }

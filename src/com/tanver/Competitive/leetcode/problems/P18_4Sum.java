@@ -3,6 +3,7 @@ package com.tanver.Competitive.leetcode.problems;
 public class P18_4Sum {
 
     public int countEven(int num) {
+
             return num / 2;
     }
 
