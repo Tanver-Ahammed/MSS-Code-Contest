@@ -60,6 +60,7 @@ public class LinkedListBasic {
             return;
         }
 
+
         /* 4. This new node is going to be the last node, so
               make next of it as null */
         new_node.next = null;
