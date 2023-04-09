@@ -39,8 +39,7 @@ public class P54_SpiralMatrix {
         int[][] arr = new int[][]{
                 {1, 2, 3},
                 {4, 5, 6},
-                {7, 8, 9},
-                {11, 12, 13}
+                {7, 8, 9}
         };
         System.out.println(new P54_SpiralMatrix().spiralOrder(arr));
     }
