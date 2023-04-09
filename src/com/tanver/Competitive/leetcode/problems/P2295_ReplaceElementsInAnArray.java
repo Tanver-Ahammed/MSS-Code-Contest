@@ -12,13 +12,10 @@ public class P2295_ReplaceElementsInAnArray {
             map.put(nums[i], i);
 
         for (int[] operation : operations) {
-            if (map.containsKey(operation[0]))
-                map.put(operation[1], map.get(operation[0]));
-        }
-
-        int index = 0;
-        for (int num : map.values()) {
-            nums[index++] = num;
+            int index = map.get(operation[0]);
+            nums[index] = operation[1];
+            map.remove(operation[0]);
+            map.put(operation[1], index);
         }
 
         return nums;
