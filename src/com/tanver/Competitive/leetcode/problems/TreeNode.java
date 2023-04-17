@@ -30,9 +30,9 @@ public class TreeNode {
         tree.right.left = new TreeNode(6);
         tree.right.right = new TreeNode(7);
 
-        Main main = new Main();
+        P144_BinaryTreePreorderTraversal main = new P144_BinaryTreePreorderTraversal();
 
-//        System.out.println(main.countNodes(tree));
+        System.out.println(main.preorderTraversal1(tree));
 
     }
 }

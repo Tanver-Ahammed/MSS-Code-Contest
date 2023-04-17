@@ -1,6 +1,6 @@
 package com.tanver.Competitive.leetcode.problems;
 
-public class P_2535_DifferenceBetweenElementSumAndDigitSumOfAnArray {
+public class P2535_DifferenceBetweenElementSumAndDigitSumOfAnArray {
 
     public int differenceOfSum(int[] nums) {
         int elementSum = 0;
