@@ -1,64 +1,34 @@
 package com.tanver.Competitive.leetcode.problems;
 
-import java.util.Iterator;
-import java.util.LinkedList;
+import java.util.Stack;
 
 public class Main {
+
+    public boolean leafSimilar(TreeNode root1, TreeNode root2) {
+        Stack<TreeNode> s1 = new Stack<>();
+        Stack<TreeNode> s2 = new Stack<>();
+        s1.push(root1);
+        s2.push(root2);
+        while (!s1.empty() && !s2.empty())
+            if (dfs(s1) != dfs(s2))
+                return false;
+        return s1.empty() && s2.empty();
+    }
+
+    public int dfs(Stack<TreeNode> s) {
+        while (true) {
+            TreeNode node = s.pop();
+            if (node.right != null)
+                s.push(node.right);
+            if (node.left != null)
+                s.push(node.left);
+            if (node.left == null && node.right == null)
+                return node.val;
+        }
+    }
 
     public static void main(String[] args) {
 
     }
 
-}
-
-
-class Graph {
-    private int V;
-    private LinkedList[] adj;
-
-    Graph(int v) {
-        V = v;
-        adj = new LinkedList[v];
-        for (int i = 0; i < v; ++i)
-            adj[i] = new LinkedList();
-    }
-
-    void addEdge(int v, int w) {
-        adj[v].add(w);
-    }
-
-    void BFS(int s) {
-
-        boolean[] visited = new boolean[V];
-
-        LinkedList<Integer> queue = new LinkedList<>();
-
-        visited[s] = true;
-        queue.add(s);
-
-        while (queue.size() != 0) {
-
-            s = queue.poll();
-            System.out.print(s + " ");
-
-            for (int n : (Iterable<Integer>) adj[s]) {
-                if (!visited[n]) {
-                    visited[n] = true;
-                    queue.add(n);
-                }
-            }
-        }
-    }
-
-    public static void main(String args[]) {
-        Graph g = new Graph(4);
-        g.addEdge(0, 1);
-        g.addEdge(0, 2);
-        g.addEdge(1, 2);
-        g.addEdge(2, 0);
-        g.addEdge(2, 3);
-        g.addEdge(3, 3);
-        System.out.println("Following is Breadth First Traversal (starting from vertex 2)");
-        g.BFS(2);
-    }
 }

@@ -5,15 +5,21 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-public class P102_BinaryTreeLevelOrderTraversal {
+public class P107_BinaryTreeLevelOrderTraversalII {
 
     private List<List<Integer>> result;
 
-    private List<List<Integer>> levelOrder(TreeNode root) {
+    public List<List<Integer>> levelOrderBottom(TreeNode root) {
         result = new ArrayList<>();
         if (root == null)
             return result;
         traverse(root, 0);
+        int size = result.size();
+        for (int i = 0; i < size / 2; i++) {
+            List<Integer> temp = result.get(i);
+            result.set(i, result.get(size - i - 1));
+            result.set(size - i - 1, temp);
+        }
         return result;
     }
 
@@ -27,7 +33,7 @@ public class P102_BinaryTreeLevelOrderTraversal {
         traverse(root.right, level + 1);
     }
 
-    public List<List<Integer>> levelOrder2(TreeNode root) {
+    public List<List<Integer>> levelOrderBottom2(TreeNode root) {
         List<List<Integer>> result = new ArrayList<>();
         if (root == null)
             return result;
@@ -46,6 +52,12 @@ public class P102_BinaryTreeLevelOrderTraversal {
                     Q.offer(current.right);
             }
             result.add(temp);
+        }
+        int size = result.size();
+        for (int i = 0; i < size / 2; i++) {
+            List<Integer> temp = result.get(i);
+            result.set(i, result.get(size - i - 1));
+            result.set(size - i - 1, temp);
         }
         return result;
     }

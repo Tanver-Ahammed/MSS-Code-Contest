@@ -19,20 +19,19 @@ public class TreeNode {
     }
 
     public static void main(String[] args) {
-        TreeNode tree = new TreeNode(1);
+        TreeNode root = new TreeNode(1);
 
-        tree.left = new TreeNode(2);
-        tree.left.left = new TreeNode(4);
-        tree.left.right = new TreeNode(5);
+        root.left = new TreeNode(2);
+        root.left.left = new TreeNode(4);
+        root.left.right = new TreeNode(5);
 
 
-        tree.right = new TreeNode(3);
-        tree.right.left = new TreeNode(6);
-        tree.right.right = new TreeNode(7);
+        root.right = new TreeNode(3);
+        root.right.left = new TreeNode(6);
+        root.right.right = new TreeNode(7);
 
-        P144_BinaryTreePreorderTraversal main = new P144_BinaryTreePreorderTraversal();
-
-        System.out.println(main.preorderTraversal1(tree));
+        P107_BinaryTreeLevelOrderTraversalII obj = new P107_BinaryTreeLevelOrderTraversalII();
+        System.out.println(obj.levelOrderBottom2(root));
 
     }
 }
