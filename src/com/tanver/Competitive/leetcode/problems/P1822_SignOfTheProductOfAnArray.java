@@ -7,8 +7,6 @@ public class P1822_SignOfTheProductOfAnArray {
         for (int num : nums) {
             if (num == 0)
                 return 0;
-            else if(num > 0)
-                prod *= 1;
             else
                 prod *= -1;
         }

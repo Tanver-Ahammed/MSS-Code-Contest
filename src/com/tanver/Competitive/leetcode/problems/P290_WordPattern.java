@@ -39,8 +39,8 @@ public class P290_WordPattern {
     }
 
     public static void main(String[] args) {
-        System.out.println(new P290_WordPattern().wordPattern("aaaa", "dog dog dog dog"));
-        System.out.println(new P290_WordPattern().wordPattern("abba", "dog cat cat fish"));
+        System.out.println(new P290_WordPattern().wordPattern1("aaaa", "dog dog dog dog"));
+        System.out.println(new P290_WordPattern().wordPattern2("abba", "dog cat cat fish"));
     }
 
 }
