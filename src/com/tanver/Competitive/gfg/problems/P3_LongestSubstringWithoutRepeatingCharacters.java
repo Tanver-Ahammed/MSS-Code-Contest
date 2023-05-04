@@ -1,4 +1,4 @@
-package com.tanver.Competitive.gfg.practice;
+package com.tanver.Competitive.gfg.problems;
 
 public class P3_LongestSubstringWithoutRepeatingCharacters {
 

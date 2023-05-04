@@ -1,8 +1,11 @@
-package com.tanver.Competitive.gfg.contest.forkjava1;
+package com.tanver.Competitive.leetcode.problems;
+
+import com.tanver.Competitive.gfg.contest.forkjava1.MainClass;
 
 import java.util.Arrays;
 
-public class MainClass {
+public class P628_MaximumProductOfThreeNumbers {
+
     public int maximumProduct(int[] nums) {
         int len = nums.length;
         Arrays.sort(nums);

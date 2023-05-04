@@ -1,4 +1,4 @@
-package com.tanver.Competitive.gfg.practice;
+package com.tanver.Competitive.gfg.problems;
 
 import java.util.Arrays;
 

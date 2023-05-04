@@ -1,8 +1,4 @@
-package com.tanver.Competitive.gfg.practice;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
+package com.tanver.Competitive.gfg.problems;
 
 public class MaxMin {
 

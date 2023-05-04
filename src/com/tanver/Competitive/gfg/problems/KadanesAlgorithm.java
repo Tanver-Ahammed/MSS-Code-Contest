@@ -1,6 +1,4 @@
-package com.tanver.Competitive.gfg.practice;
-
-import com.tanver.Competitive.gfg.Main;
+package com.tanver.Competitive.gfg.problems;
 
 public class KadanesAlgorithm {
 
