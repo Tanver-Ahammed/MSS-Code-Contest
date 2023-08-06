@@ -1,4 +1,4 @@
-package com.tanver.ostad.app;
+package com.tanver.Competitive.ostad.app;
 
 public class SumOfFirstNNumbers {
 
