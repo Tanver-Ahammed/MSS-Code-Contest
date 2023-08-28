@@ -1,4 +1,4 @@
-package com.tanver.Competitive.ostad.app;
+package com.tanver.Competitive.ostad.app.recursion;
 
 public class AssignmentOnRecursion {
 

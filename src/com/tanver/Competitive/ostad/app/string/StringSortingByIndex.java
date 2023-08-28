@@ -1,4 +1,4 @@
-package com.tanver.Competitive.ostad.app;
+package com.tanver.Competitive.ostad.app.string;
 
 public class StringSortingByIndex {
 

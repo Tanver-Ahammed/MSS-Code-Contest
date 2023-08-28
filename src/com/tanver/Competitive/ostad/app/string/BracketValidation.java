@@ -1,4 +1,4 @@
-package com.tanver.Competitive.ostad.app;
+package com.tanver.Competitive.ostad.app.string;
 
 import java.util.Stack;
 
