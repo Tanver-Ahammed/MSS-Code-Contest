@@ -29,10 +29,17 @@ public class Test {
 
     public static void main(String[] args) {
 
-        String word = "madum";
-        System.out.println(new Test().isPalindrome(word, 0, word.length() - 1));
-
-        int[] arr = {1, 2, 3, 15, 5, 6, 7, 8, 9};
-        System.out.println(new Test().max(arr, 0, Integer.MIN_VALUE));
+        int n = 1000;
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                for (int k = 0; k < n; k++) {
+                    for (int l = 0; l < n; l++) {
+                        for (int m = 0; m < n; m++) {
+                        }
+                    }
+                }
+            }
+            System.out.println("Tanver");
+        }
     }
 }

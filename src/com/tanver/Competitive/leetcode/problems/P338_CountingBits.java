@@ -47,7 +47,17 @@ public class P338_CountingBits {
         return results;
     }
 
+    public int[] countBits3(int n) {
+        int[] counts = new int[n + 1];
+        for (int i = 1; i <= n; ++i) {
+            counts[i] = i % 2 + counts[i / 2];
+        }
+        return counts;
+    }
+
     public static void main(String[] args) {
         System.out.println(Arrays.toString(new P338_CountingBits().countBits1(5)));
+        System.out.println(Arrays.toString(new P338_CountingBits().countBits2(5)));
+        System.out.println(Arrays.toString(new P338_CountingBits().countBits3(5)));
     }
 }
