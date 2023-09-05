@@ -24,7 +24,7 @@ public class Main {
 //    }
 
     private static String isValidBracket(String s) {
-        Stack<Character>stack = new Stack<>();
+        Stack<Character> stack = new Stack<>();
         for (char ch : s.toCharArray()) {
             if (ch == '(')
                 stack.push(')');
@@ -53,6 +53,23 @@ public class Main {
             String s = scanner.next();
             System.out.println(isValidBracket(s));
         }
+    }
+
+}
+
+
+class Check {
+
+    private int takingTime(int[] arr, int k) {
+        int totalTime = 0;
+        for (int i = 0; i < arr.length; i++) {
+            if (i < k) {
+                totalTime += Math.min(arr[i], arr[k]);
+            } else {
+                totalTime += arr[i];
+            }
+        }
+        return totalTime;
     }
 
 }

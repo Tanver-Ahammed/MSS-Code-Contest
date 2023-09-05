@@ -1,6 +1,12 @@
 package com.tanver.Competitive.ostad.app.stack.queue;
 
+import java.util.Scanner;
 import java.util.Stack;
+
+/**
+ * Time Complexity: O(N)
+ * Space Complexity: O(N)
+ * */
 
 public class AssignmentOnStackAndQueue {
 
@@ -16,6 +22,11 @@ public class AssignmentOnStackAndQueue {
         for (char ch : stack)
             sb.append(ch);
         return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        System.out.println(new AssignmentOnStackAndQueue()
+                .removeAdjacentDuplicates(new Scanner(System.in).next()));
     }
 
 }
