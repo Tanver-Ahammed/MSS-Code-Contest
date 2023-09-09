@@ -16,13 +16,6 @@ public class Main {
         return -1;
     }
 
-//    public static void main(String[] args) {
-//        List<Integer> list = new ArrayList<>(List.of(2, 1, 1));
-//        System.out.println(new Main().majorityElement(list));
-//        Stack stack = null;
-//        System.out.println(stack.pop());
-//    }
-
     private static String isValidBracket(String s) {
         Stack<Character> stack = new Stack<>();
         for (char ch : s.toCharArray()) {
