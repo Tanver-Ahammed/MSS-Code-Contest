@@ -1,4 +1,4 @@
-package com.tanver.study.graph;
+package com.tanver.study.apna.college.graph.adjecnt;
 
 import java.util.*;
 
@@ -32,6 +32,7 @@ public class AdjacencyListUsingBFSandBFS {
             int destination = scanner.nextInt();
             graph.insertEdge(source, destination);
         }
+        System.out.println(Arrays.toString(adjacency));
         System.out.print("Enter Source for BFS & BFS Traversal: ");
         int source = scanner.nextInt();
         new BFS().bfs(adjacency, source);

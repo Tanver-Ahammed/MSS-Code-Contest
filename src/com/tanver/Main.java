@@ -4,18 +4,6 @@ import java.util.*;
 
 public class Main {
 
-    public int majorityElement(final List<Integer> A) {
-        Map<Integer, Integer> map = new HashMap<>();
-        int n = A.size();
-        for (int a : A) {
-            map.put(a, map.getOrDefault(a, 0) + 1);
-            int val = map.get(a);
-            if (val > n / 2)
-                return a;
-        }
-        return -1;
-    }
-
     private static String isValidBracket(String s) {
         Stack<Character> stack = new Stack<>();
         for (char ch : s.toCharArray()) {
@@ -46,23 +34,6 @@ public class Main {
             String s = scanner.next();
             System.out.println(isValidBracket(s));
         }
-    }
-
-}
-
-
-class Check {
-
-    private int takingTime(int[] arr, int k) {
-        int totalTime = 0;
-        for (int i = 0; i < arr.length; i++) {
-            if (i < k) {
-                totalTime += Math.min(arr[i], arr[k]);
-            } else {
-                totalTime += arr[i];
-            }
-        }
-        return totalTime;
     }
 
 }

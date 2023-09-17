@@ -1,4 +1,4 @@
-package com.tanver.study.graph;
+package com.tanver.study.apna.college.graph.adjecnt;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
