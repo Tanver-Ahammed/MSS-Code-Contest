@@ -1,9 +1,9 @@
-package com.tanver.study.apna.college.tree.traversal;
+package com.tanver.study.apna.college.tree;
 
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class PreOrder {
+public class BinaryTree {
 
     static class Node {
 
@@ -28,7 +28,7 @@ public class PreOrder {
         }
     }
 
-    static class BinaryTree {
+    static class Tree {
         static int index = -1;
 
         public static Node buildTree(int[] nodes) {
@@ -169,29 +169,29 @@ public class PreOrder {
 
     public static void main(String[] args) {
         int[] nodes = {1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1};
-        Node root = BinaryTree.buildTree(nodes);
+        Node root = Tree.buildTree(nodes);
         System.out.println("Root: " + root.data);
         System.out.println("\nPerOder:");
-        BinaryTree.preOrder(root);
+        Tree.preOrder(root);
 
         System.out.println("\n\nInOder:");
-        BinaryTree.inOrder(root);
+        Tree.inOrder(root);
 
         System.out.println("\n\npostOder:");
-        BinaryTree.postOrder(root);
+        Tree.postOrder(root);
 
         System.out.println("\n\nLevelOrder: ");
-        BinaryTree.levelOrder(root);
+        Tree.levelOrder(root);
 
-        System.out.println("\nCount Total Nodes: " + BinaryTree.countTotalNodes(root));
+        System.out.println("\nCount Total Nodes: " + Tree.countTotalNodes(root));
 
-        System.out.println("\nSum of All Nodes: " + BinaryTree.sumOfAllNodes(root));
+        System.out.println("\nSum of All Nodes: " + Tree.sumOfAllNodes(root));
 
-        System.out.println("\nHeight of the Tree: " + BinaryTree.heightOfTree(root));
+        System.out.println("\nHeight of the Tree: " + Tree.heightOfTree(root));
 
-        System.out.println("\nDiameter: " + BinaryTree.diameter1(root));
+        System.out.println("\nDiameter: " + Tree.diameter1(root));
 
-        System.out.println("\nDiameter: " + BinaryTree.diameter2(root).diam);
+        System.out.println("\nDiameter: " + Tree.diameter2(root).diam);
 
 
     }
