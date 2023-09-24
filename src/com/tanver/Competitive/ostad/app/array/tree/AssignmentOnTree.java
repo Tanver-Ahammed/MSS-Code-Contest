@@ -1,7 +1,5 @@
 package com.tanver.Competitive.ostad.app.array.tree;
 
-import com.tanver.Competitive.leetcode.problems.Node;
-
 import java.util.Scanner;
 
 /**
