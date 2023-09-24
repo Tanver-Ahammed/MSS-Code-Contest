@@ -1,4 +1,4 @@
-package com.tanver.Competitive.ostad.app.array.tree;
+package com.tanver.Competitive.ostad.app.tree;
 
 import java.util.Scanner;
 
