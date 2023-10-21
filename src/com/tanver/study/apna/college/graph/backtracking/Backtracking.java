@@ -32,9 +32,3 @@ public class Backtracking {
     }
 
 }
-
-
-class RatInAMaze {
-
-
-}

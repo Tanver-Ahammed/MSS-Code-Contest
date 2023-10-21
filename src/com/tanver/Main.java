@@ -97,5 +97,3 @@ class BinarySearch {
         System.out.println(binarySearch(arr, target));
     }
 }
-
-
